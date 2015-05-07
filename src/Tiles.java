@@ -10,7 +10,7 @@ import org.newdawn.slick.geom.Shape;
 public class Tiles{
 	//public Image Square = null;
 	public Shape rect = null;
-	int fall = 2;
+	float fall = 2;
 	
 	/*public static void main (String[] args) throws SlickException{
 		AppGameContainer app = new AppGameContainer(new tiles ("test"));
@@ -21,9 +21,9 @@ public class Tiles{
 	}
 */
 	
-	public void falling(GameContainer arg0, int arg1) throws SlickException {
+	public void falling(GameContainer arg0, int delta) throws SlickException {
 	
-			fall = fall + 2;
+			fall = fall + 0.05000f * delta;
 			if (fall >= 550)
 				fall = 550;
 		
