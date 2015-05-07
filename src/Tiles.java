@@ -2,6 +2,7 @@
 //import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
 //import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
@@ -43,43 +44,43 @@ public class Tiles{
 		rect3 = new Rectangle(0,0,rectWidth,rectHeight);
 		rect4 = new Rectangle(0,0,rectWidth,rectHeight);
 	}*/
-	public void typeI(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
-
+	public void typeI(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
+		
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		else if (rot== 1){
-			rect1 = new Rectangle(Setup.width/2,fall-100,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2+pos,fall-100,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		else if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		else if (rot== 3){
-			rect1 = new Rectangle(Setup.width/2,fall-100,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2+pos,fall-100,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);

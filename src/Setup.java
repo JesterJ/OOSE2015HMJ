@@ -12,8 +12,13 @@ public class Setup extends BasicGame {
 	public static int width = 800;
 	public static int height = 600;
 	public static int rotation = 0;
+	public static int pos = 0;
 	Tiles tiles = new Tiles();
-	//private Shape rect = null;
+	//Player player = new Player();
+	public static int left = 0;
+	public static int right = 0;
+	public int key = Input.ANY_CONTROLLER;
+	public char something;
 
 
 		public Setup(String title) {
@@ -29,11 +34,12 @@ public class Setup extends BasicGame {
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
 			tiles.falling(container, delta);
+			//player.keyPressed(key, something);
 		}
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			tiles.typeJ(container, g, rotation);
+			tiles.typeI(container, g, rotation, pos);
 		}
 
 		public static void main(String[] args) throws SlickException{
@@ -47,12 +53,19 @@ public class Setup extends BasicGame {
 			gamecontainer.start();
 			
 		}
-		public void keyPressed (int key, char c){
-			if (key == Input.KEY_F){
-				rotation++;
-				if(rotation == 4)
-					rotation = 0;
+		
+			public void keyPressed (int key, char c){
+				if (key == Input.KEY_F){
+					Setup.rotation++;
+					if(Setup.rotation == 4)
+						Setup.rotation = 0;
+				}
+				if (key == Input.KEY_K){
+					pos = pos - 50;
+				}
+				if (key == Input.KEY_L){
+					pos = pos + 50;
+				}
 			}
-		}
 
 	}
