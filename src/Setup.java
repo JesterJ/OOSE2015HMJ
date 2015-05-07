@@ -8,6 +8,7 @@ import org.newdawn.slick.geom.Line;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.KeyListener;
+import java.util.Random;
 
 public class Setup extends BasicGame {
 	public static int width = 600;
@@ -78,5 +79,42 @@ public class Setup extends BasicGame {
 					pos = pos + 50;
 				}
 			}
+			
+			
+	public spawner(){
+		Random t = new Random(7);
+		int number; //Stores number from random t
 
+  
+  		if(number == 0){
+  		typeI();
+		 }
+  
+  		if(number == 1){
+  		typeL();
+  		}
+  
+    		if(number == 2){
+  		typeJ();
+  		}
+  
+    		if(number == 3){
+  		typeT();
+  		}
+  
+    		if(number == 4){
+  		typeO();
+  		}
+  
+    		if(number == 5){
+  		typeS();
+  		}
+  
+    		if(number == 6){
+  		typeZ();
+  		}
 	}
+
+
+
+}
