@@ -1,0 +1,21 @@
+			public void keyPressed (int key, char c){
+				if (lSInter == false && rSInter == false && flInter == false && key == Input.KEY_F){
+					Setup.rotation++;
+					if(Setup.rotation == 4)
+						Setup.rotation = 0;
+				}
+				if (lSInter == false && flInter == false && key == Input.KEY_K){
+					pos = pos - 50;
+				}
+				if (rSInter == false && flInter == false && key == Input.KEY_L){
+					pos = pos + 50;
+				}
+			}
+			
+			
+			
+			
+			
+			if (rSInter == false && flInter == false && key == Input.KEY_L){
+					fall = fall + 50;
+				}
