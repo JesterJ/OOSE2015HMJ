@@ -4,6 +4,7 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Line;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.KeyListener;
@@ -19,6 +20,8 @@ public class Setup extends BasicGame {
 	public static int right = 0;
 	public int key = Input.ANY_CONTROLLER;
 	public char something;
+	private Shape floor = null;
+	private boolean flInter = false;
 
 
 		public Setup(String title) {
@@ -28,18 +31,26 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void init(GameContainer container) throws SlickException {
-		
+			floor = new Line(800,600, 0, 600);
 		}
 		
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
-			tiles.falling(container, delta);
+			
 			//player.keyPressed(key, something);
+			
+			flInter = tiles.intersection(floor);
+			
+			if(flInter == false)tiles.falling(container, delta);
+				
 		}
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
+			g.draw(floor);
+			
 			tiles.typeI(container, g, rotation, pos);
+			
 		}
 
 		public static void main(String[] args) throws SlickException{
@@ -55,15 +66,15 @@ public class Setup extends BasicGame {
 		}
 		
 			public void keyPressed (int key, char c){
-				if (key == Input.KEY_F){
+				if (flInter == false && key == Input.KEY_F){
 					Setup.rotation++;
 					if(Setup.rotation == 4)
 						Setup.rotation = 0;
 				}
-				if (key == Input.KEY_K){
+				if (flInter == false && key == Input.KEY_K){
 					pos = pos - 50;
 				}
-				if (key == Input.KEY_L){
+				if (flInter == false && key == Input.KEY_L){
 					pos = pos + 50;
 				}
 			}
