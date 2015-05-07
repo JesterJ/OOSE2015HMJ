@@ -5,7 +5,8 @@ int lane4 = 120;
 int score = 0;
 int mScore;
 
-if(elimination == 1){
+
+if(elimination == 1){ // if 1 lane is eliminated then add points
   mScore = score + lane1;
 }
 
@@ -22,6 +23,12 @@ if(elimination == 4){
 }
 
 score = mScore;
+
+
+JTextField wScore = new JTextField("Score: " + score ,30); //(import JTextField() library), Shows score an undefined place
+
+
+
 
 
 }
