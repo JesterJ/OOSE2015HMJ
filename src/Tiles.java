@@ -10,14 +10,11 @@ import org.newdawn.slick.geom.Shape;
 public class Tiles{
 	public int rectWidth = 50;
 	public int rectHeight = 50;
-	public Shape rect = null;
-	public Shape typeI = null;
-	public Shape typeL = null;
-	public Shape typeJ = null;
-	public Shape typeT = null;
-	public Shape typeS = null;
-	public Shape typeZ = null;
-	public Shape typeO = null;
+	public Shape rect1 = null;
+	public Shape rect2 = null;
+	public Shape rect3 = null;
+	public Shape rect4 = null;
+	
 	float fall = 2f;
 	
 
@@ -31,7 +28,7 @@ public class Tiles{
 	}
 	
 	public void drawing(GameContainer arg0, Graphics arg1) throws SlickException {
-		arg1.draw(rect = new Rectangle(350, fall, 50, 50));
+		//arg1.draw(rect1 = new Rectangle(350, fall, 50, 50));
 
 	}
 	
@@ -39,10 +36,81 @@ public class Tiles{
 		if (number == 0){
 		}
 	}
-	public void onStartUp(){
-	rect = 	new Rectangle(0,0,rectWidth,rectHeight);
-	typeI = new Rectangle(0,0,rectWidth*4,rectHeight);
-	
+	/*public void onStartUp(){
+		rect1 = new Rectangle(0,0,rectWidth,rectHeight);
+		rect2 = new Rectangle(0,0,rectWidth,rectHeight);
+		rect3 = new Rectangle(0,0,rectWidth,rectHeight);
+		rect4 = new Rectangle(0,0,rectWidth,rectHeight);
+	}*/
+	public void typeI(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeL(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeJ(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2-100,fall-50,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeT(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeO(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeS(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2+50,fall-50,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
+	}
+	public void typeZ(GameContainer arg0, Graphics arg1) throws SlickException {
+		rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+		arg1.draw(rect1);
+		arg1.draw(rect2);
+		arg1.draw(rect3);
+		arg1.draw(rect4);
 	}
 	
 }

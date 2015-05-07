@@ -30,7 +30,7 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			tiles.drawing(container, g);
+			tiles.typeZ(container, g);
 		}
 
 		public static void main(String[] args) throws SlickException{
