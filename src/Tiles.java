@@ -38,12 +38,6 @@ public class Tiles{
 		if (number == 0){
 		}
 	}
-	/*public void onStartUp(){
-		rect1 = new Rectangle(0,0,rectWidth,rectHeight);
-		rect2 = new Rectangle(0,0,rectWidth,rectHeight);
-		rect3 = new Rectangle(0,0,rectWidth,rectHeight);
-		rect4 = new Rectangle(0,0,rectWidth,rectHeight);
-	}*/
 	public void typeI(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		
 		if (rot == 0){
@@ -88,42 +82,42 @@ public class Tiles{
 			}
 	}
 	
-	public void typeL(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeL(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-100,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-100+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-100,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-100+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
@@ -131,42 +125,42 @@ public class Tiles{
 			}
 	}
 	
-	public void typeJ(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeJ(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-100,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-100+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-100,fall+50f,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-100+pos,fall+50f,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
@@ -174,42 +168,42 @@ public class Tiles{
 			}
 	}
 	
-	public void typeT(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeT(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-		rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-		rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-		rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-		rect4 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
+		rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+		rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+		rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+		rect4 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
 		arg1.draw(rect1);
 		arg1.draw(rect2);
 		arg1.draw(rect3);
 		arg1.draw(rect4);
 		}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2-100,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
@@ -217,42 +211,42 @@ public class Tiles{
 			}
 	}
 	
-	public void typeO(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeO(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 			}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
@@ -260,42 +254,42 @@ public class Tiles{
 			}
 	}
 	
-	public void typeS(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeS(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall+50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall+50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
@@ -303,42 +297,42 @@ public class Tiles{
 		}
 	}
 	
-	public void typeZ(GameContainer arg0, Graphics arg1, int rot) throws SlickException {
+	public void typeZ(GameContainer arg0, Graphics arg1, int rot, int pos) throws SlickException {
 		if (rot == 0){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 1){
-			rect1 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 2){
-			rect1 = new Rectangle(Setup.width/2-50,fall-50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2+50,fall,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall-50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+50+pos,fall,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
 		}
 		if (rot == 3){
-			rect1 = new Rectangle(Setup.width/2-50,fall+50,rectWidth,rectHeight);
-			rect2 = new Rectangle(Setup.width/2-50,fall,rectWidth,rectHeight);
-			rect3 = new Rectangle(Setup.width/2,fall,rectWidth,rectHeight);
-			rect4 = new Rectangle(Setup.width/2,fall-50,rectWidth,rectHeight);
+			rect1 = new Rectangle(Setup.width/2-50+pos,fall+50,rectWidth,rectHeight);
+			rect2 = new Rectangle(Setup.width/2-50+pos,fall,rectWidth,rectHeight);
+			rect3 = new Rectangle(Setup.width/2+pos,fall,rectWidth,rectHeight);
+			rect4 = new Rectangle(Setup.width/2+pos,fall-50,rectWidth,rectHeight);
 			arg1.draw(rect1);
 			arg1.draw(rect2);
 			arg1.draw(rect3);
