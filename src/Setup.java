@@ -2,13 +2,16 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
+import org.newdawn.slick.KeyListener;
 
 public class Setup extends BasicGame {
 	public static int width = 800;
 	public static int height = 600;
+	public static int rotation = 0;
 	Tiles tiles = new Tiles();
 	//private Shape rect = null;
 
@@ -30,7 +33,7 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			tiles.typeZ(container, g);
+			tiles.typeJ(container, g, rotation);
 		}
 
 		public static void main(String[] args) throws SlickException{
@@ -43,6 +46,13 @@ public class Setup extends BasicGame {
 			
 			gamecontainer.start();
 			
+		}
+		public void keyPressed (int key, char c){
+			if (key == Input.KEY_F){
+				rotation++;
+				if(rotation == 4)
+					rotation = 0;
+			}
 		}
 
 	}
