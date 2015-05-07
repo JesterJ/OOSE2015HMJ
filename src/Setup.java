@@ -8,6 +8,7 @@ import org.newdawn.slick.geom.Line;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.KeyListener;
+import java.util.Random;
 
 public class Setup extends BasicGame {
 	public static int width = 600;
@@ -21,8 +22,15 @@ public class Setup extends BasicGame {
 	public int key = Input.ANY_CONTROLLER;
 	public char something;
 	private Shape floor = null;
+	private Shape rightSide = null;
+	private Shape leftSide = null;
 	private boolean flInter = false;
+<<<<<<< HEAD
 	public boolean [][] posGrid = new boolean [width/50][height/50];
+=======
+	private boolean rSInter = false;
+	private boolean lSInter = false;
+>>>>>>> 33b94579df495639cbef36337a6d57b4c12e6c11
 
 
 		public Setup(String title) {
@@ -33,6 +41,8 @@ public class Setup extends BasicGame {
 		@Override
 		public void init(GameContainer container) throws SlickException {
 			floor = new Line(width,height, 0, height);
+			rightSide = new Line(width,0,width,height);
+			leftSide = new Line(0,0,0,height);
 		}
 		
 		@Override
@@ -40,6 +50,8 @@ public class Setup extends BasicGame {
 			
 			
 			flInter = tiles.intersection(floor);
+			rSInter = tiles.intersection(rightSide);
+			lSInter = tiles.intersection(leftSide);
 			
 			if(flInter == false)tiles.falling(container, delta);
 				
@@ -48,6 +60,8 @@ public class Setup extends BasicGame {
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
 			g.draw(floor);
+			g.draw(rightSide);
+			g.draw(leftSide);
 			
 			tiles.typeI(container, g, rotation, pos);
 			
@@ -70,17 +84,54 @@ public class Setup extends BasicGame {
 		}
 		
 			public void keyPressed (int key, char c){
-				if (flInter == false && key == Input.KEY_F){
+				if (lSInter == false && rSInter == false && flInter == false && key == Input.KEY_F){
 					Setup.rotation++;
 					if(Setup.rotation == 4)
 						Setup.rotation = 0;
 				}
-				if (flInter == false && key == Input.KEY_K){
+				if (lSInter == false && flInter == false && key == Input.KEY_K){
 					pos = pos - 50;
 				}
-				if (flInter == false && key == Input.KEY_L){
+				if (rSInter == false && flInter == false && key == Input.KEY_L){
 					pos = pos + 50;
 				}
 			}
+			
+			
+	public spawner(){
+		Random t = new Random(7);
+		int number; //Stores number from random t
 
+  
+  		if(number == 0){
+  		typeI();
+		 }
+  
+  		if(number == 1){
+  		typeL();
+  		}
+  
+    		if(number == 2){
+  		typeJ();
+  		}
+  
+    		if(number == 3){
+  		typeT();
+  		}
+  
+    		if(number == 4){
+  		typeO();
+  		}
+  
+    		if(number == 5){
+  		typeS();
+  		}
+  
+    		if(number == 6){
+  		typeZ();
+  		}
 	}
+
+
+
+}
