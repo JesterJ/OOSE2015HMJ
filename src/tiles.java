@@ -1,11 +1,5 @@
-import org.newdawn.slick.AppGameContainer;
-import org.newdawn.slick.BasicGame;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
 
-public class tiles extends BasicGame {
+public class tiles {/*
 	public Image Square = null;
 	public Image Type1 = null;
 	int fall = 2;
@@ -40,5 +34,5 @@ public class tiles extends BasicGame {
 	public void type1 () throws SlickException{
 		Type1 = new Image ("/home/henrik/workspace/OOSE2015/OOSE2015/images/Square.jpg");
 	}
-	
+	*/
 }
