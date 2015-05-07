@@ -22,7 +22,11 @@ public class Setup extends BasicGame {
 	public int key = Input.ANY_CONTROLLER;
 	public char something;
 	private Shape floor = null;
+	private Shape rightSide = null;
+	private Shape leftSide = null;
 	private boolean flInter = false;
+	private boolean rSInter = false;
+	private boolean lSInter = false;
 
 
 		public Setup(String title) {
@@ -33,6 +37,8 @@ public class Setup extends BasicGame {
 		@Override
 		public void init(GameContainer container) throws SlickException {
 			floor = new Line(width,height, 0, height);
+			rightSide = new Line(width,0,width,height);
+			leftSide = new Line(0,0,0,height);
 		}
 		
 		@Override
@@ -41,6 +47,8 @@ public class Setup extends BasicGame {
 			//player.keyPressed(key, something);
 			
 			flInter = tiles.intersection(floor);
+			rSInter = tiles.intersection(rightSide);
+			lSInter = tiles.intersection(leftSide);
 			
 			if(flInter == false)tiles.falling(container, delta);
 				
@@ -49,6 +57,8 @@ public class Setup extends BasicGame {
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
 			g.draw(floor);
+			g.draw(rightSide);
+			g.draw(leftSide);
 			
 			tiles.typeI(container, g, rotation, pos);
 			
@@ -67,15 +77,15 @@ public class Setup extends BasicGame {
 		}
 		
 			public void keyPressed (int key, char c){
-				if (flInter == false && key == Input.KEY_F){
+				if (lSInter == false && rSInter == false && flInter == false && key == Input.KEY_F){
 					Setup.rotation++;
 					if(Setup.rotation == 4)
 						Setup.rotation = 0;
 				}
-				if (flInter == false && key == Input.KEY_K){
+				if (lSInter == false && flInter == false && key == Input.KEY_K){
 					pos = pos - 50;
 				}
-				if (flInter == false && key == Input.KEY_L){
+				if (rSInter == false && flInter == false && key == Input.KEY_L){
 					pos = pos + 50;
 				}
 			}
