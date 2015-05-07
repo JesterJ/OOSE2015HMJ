@@ -5,6 +5,7 @@ Public class spawner{
 
 Random t = new Random(7);
 int number; //Stores number from random t
+
   
   if(number == 0){
   typeI();
