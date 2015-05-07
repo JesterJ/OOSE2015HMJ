@@ -10,10 +10,10 @@ public class Player {
 				Setup.rotation = 0;
 		}
 		if (key == Input.KEY_K){
-			Setup.left = true;
+			//Setup.left = true;
 		}
 		if (key == Input.KEY_L){
-			Setup.right = true;
+			//Setup.right = true;
 		}
 	}
 	

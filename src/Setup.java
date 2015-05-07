@@ -9,8 +9,8 @@ import org.newdawn.slick.geom.Shape;
 import org.newdawn.slick.KeyListener;
 
 public class Setup extends BasicGame {
-	public static int width = 800;
-	public static int height = 600;
+	public static int width = 600;
+	public static int height = 800;
 	public static int rotation = 0;
 	public static int pos = 0;
 	Tiles tiles = new Tiles();
@@ -39,7 +39,7 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			tiles.typeI(container, g, rotation, pos);
+			tiles.typeL(container, g, rotation, pos);
 		}
 
 		public static void main(String[] args) throws SlickException{
