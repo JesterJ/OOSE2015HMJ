@@ -39,6 +39,8 @@ public class Setup extends BasicGame {
 			
 			gamecontainer.setDisplayMode(width, height, false);
 			
+			//gamecontainer.setMinimumLogicUpdateInterval(5);
+			
 			gamecontainer.start();
 			
 		}
