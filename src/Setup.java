@@ -22,6 +22,7 @@ public class Setup extends BasicGame {
 	public char something;
 	private Shape floor = null;
 	private boolean flInter = false;
+	public boolean [][] posGrid = new boolean [width/50][height/50];
 
 
 		public Setup(String title) {
@@ -37,7 +38,6 @@ public class Setup extends BasicGame {
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
 			
-			//player.keyPressed(key, something);
 			
 			flInter = tiles.intersection(floor);
 			
@@ -63,6 +63,10 @@ public class Setup extends BasicGame {
 			
 			gamecontainer.start();
 			
+		}
+		public void grid (boolean[][] gridPos, int possition ){
+			int temp = rotation;
+			int temp2 = pos;
 		}
 		
 			public void keyPressed (int key, char c){
