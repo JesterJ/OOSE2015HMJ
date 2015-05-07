@@ -8,18 +8,17 @@ import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 
 public class Tiles{
-	//public Image Square = null;
+	public int rectWidth = 50;
+	public int rectHeight = 50;
 	public Shape rect = null;
+	public Shape typeI = null;
+	public Shape typeL = null;
+	public Shape typeJ = null;
+	public Shape typeT = null;
+	public Shape typeS = null;
+	public Shape typeZ = null;
+	public Shape typeO = null;
 	int fall = 2;
-	
-	/*public static void main (String[] args) throws SlickException{
-		AppGameContainer app = new AppGameContainer(new tiles ("test"));
-		
-		app.setDisplayMode(800,600, false);
-		app.setAlwaysRender(true);
-		app.start();
-	}
-*/
 	
 	public void falling(GameContainer arg0, int arg1) throws SlickException {
 	
@@ -32,6 +31,16 @@ public class Tiles{
 	public void drawing(GameContainer arg0, Graphics arg1) throws SlickException {
 		arg1.draw(rect = new Rectangle(350, fall, 50, 50));
 
+	}
+	
+	public void type (int number){
+		if (number == 0){
+		}
+	}
+	public void onStartUp(){
+	rect = 	new Rectangle(0,0,rectWidth,rectHeight);
+	typeI = new Rectangle(0,0,rectWidth*4,rectHeight);
+	
 	}
 	
 }

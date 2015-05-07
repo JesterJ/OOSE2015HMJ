@@ -7,7 +7,9 @@ import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 
 public class Setup extends BasicGame {
-	Tiles name = new Tiles();
+	public static int width = 800;
+	public static int height = 600;
+	Tiles tiles = new Tiles();
 	//private Shape rect = null;
 
 
@@ -23,19 +25,19 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
-			name.falling(container, delta);
+			tiles.falling(container, delta);
 		}
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			name.drawing(container, g);
+			tiles.drawing(container, g);
 		}
 
 		public static void main(String[] args) throws SlickException{
 		
 			AppGameContainer gamecontainer = new AppGameContainer(new Setup("Setup Test"));
 			
-			gamecontainer.setDisplayMode(800, 600, false);
+			gamecontainer.setDisplayMode(width, height, false);
 			
 			gamecontainer.start();
 			
