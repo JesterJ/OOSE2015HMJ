@@ -1,20 +1,48 @@
-import javax.swing.JFrame;
+public class Player_Config {
+/*
+Void Update(){
+Public static void downwardMovement();
+if(keyPressed(Left){
+moveLeft();
+}
+if(keyPressed(Right){
+moveRight();
+}
+if(keyPressed(Up){
+rotate();
+}
+}
 
-
-public class Tetris_ControlSystem {
-
-	public static int rotate, left, right, down, pause;
-	
-	public static void openConfig(/*JFrame Frame*/){
-		JFrame options = new JFrame("options");
-		options.setSize(400, 300);
-		options.setResizable(false);
-		options.setLocationRelativeTo(frame);
-		options.setVisible(true);
+Public static void downwardMovement(){
+// for(i=0; i>=y; i++){
+	// if(y+1=1){
+	// yPos = yPos;
+	// Delay(1000);
+	} else {
+	// yPos = yPos+1;
+	//Println("Player moved down");
+	// Delay(1000);
 	}
-	
-	
-	
-	
-	
+	}
+}
+
+
+Public void moveLeft(){
+	// xPos = xPos - 1;
+	// Println("Player moved left");
+}
+
+Public void moveRight(){
+	// xPos = xPos + 1;
+	// Println("Player moved right");
+}
+
+public void rotate(){
+
+}
+
+
+
+
+*/
 }
