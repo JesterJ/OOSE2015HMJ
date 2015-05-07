@@ -25,12 +25,10 @@ public class Setup extends BasicGame {
 	private Shape rightSide = null;
 	private Shape leftSide = null;
 	private boolean flInter = false;
-<<<<<<< HEAD
 	public boolean [][] posGrid = new boolean [width/50][height/50];
-=======
 	private boolean rSInter = false;
 	private boolean lSInter = false;
->>>>>>> 33b94579df495639cbef36337a6d57b4c12e6c11
+	Random r = new Random ();
 
 
 		public Setup(String title) {
@@ -40,14 +38,19 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void init(GameContainer container) throws SlickException {
+			
 			floor = new Line(width,height, 0, height);
 			rightSide = new Line(width,0,width,height);
 			leftSide = new Line(0,0,0,height);
+			//spawner();
 		}
 		
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
-			
+			/*if (flInter){
+				spawner();
+				flInter = false;
+			}*/
 			
 			flInter = tiles.intersection(floor);
 			rSInter = tiles.intersection(rightSide);
@@ -59,11 +62,16 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
+			tiles.typeI(container, g, rotation, pos);
+			if (flInter){
+				spawner(container, g, rotation, pos);
+				//flInter = false;
+			}
 			g.draw(floor);
 			g.draw(rightSide);
 			g.draw(leftSide);
 			
-			tiles.typeI(container, g, rotation, pos);
+			
 			
 		}
 
@@ -98,37 +106,36 @@ public class Setup extends BasicGame {
 			}
 			
 			
-	public spawner(){
-		Random t = new Random(7);
-		int number; //Stores number from random t
-
+	public void spawner(GameContainer container, Graphics g, int rot, int pos){
+	
+		int t = r.nextInt(7);
   
-  		if(number == 0){
-  		typeI();
+  		if(t == 0){
+  			Tiles.typeI(container, g, rotation, pos);
 		 }
   
-  		if(number == 1){
-  		typeL();
+  		if(t == 1){
+  			Tiles.typeL(container, g, rotation, pos);
   		}
   
-    		if(number == 2){
-  		typeJ();
+    	if(t == 2){
+    		Tiles.typeJ(container, g, rotation, pos);
   		}
   
-    		if(number == 3){
-  		typeT();
+    	if(t == 3){
+    		Tiles.typeT(container, g, rotation, pos);
   		}
   
-    		if(number == 4){
-  		typeO();
+    	if(t == 4){
+    		Tiles.typeO(container, g, rotation, pos);
   		}
   
-    		if(number == 5){
-  		typeS();
+    	if(t == 5){
+    		Tiles.typeS(container, g, rotation, pos);
   		}
   
-    		if(number == 6){
-  		typeZ();
+    	if(t == 6){
+    		Tiles.typeZ(container, g, rotation, pos);
   		}
 	}
 
