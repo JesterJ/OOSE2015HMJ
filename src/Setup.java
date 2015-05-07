@@ -3,9 +3,12 @@ import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
+import java.util.Scanner;
 
 public class Setup extends BasicGame {
-
+	
+	boolean start = false;
+	
 		public Setup(String title) {
 			super(title);
 			
@@ -19,6 +22,12 @@ public class Setup extends BasicGame {
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
 			
+			addKeyListener 
+			if(start == true){
+				tetrisSpawner();
+				
+			}
+				
 			
 		}
 		
@@ -35,6 +44,10 @@ public class Setup extends BasicGame {
 			gamecontainer.setDisplayMode(800, 600, false);
 			
 			gamecontainer.start();
+			
+		}
+		
+		public void tetrisSpawner(){
 			
 		}
 
