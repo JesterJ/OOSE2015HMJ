@@ -103,6 +103,9 @@ public class Setup extends BasicGame {
 				if (rSInter == false && flInter == false && key == Input.KEY_L){
 					pos = pos + 50;
 				}
+				/* if (rSInter == false && flInter == false && key == Input.KEY_M){
+-					fall = fall + 50;
+-				}*/ //could be implemented for faster falling (might need editing)
 			}
 			
 			
