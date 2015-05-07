@@ -18,15 +18,27 @@ public class Tiles{
 	public Shape rect4 = null;
 	
 	float fall = 2f;
-	
+	public boolean intersect1 = false;
+	public boolean intersect2 = false;
+	public boolean intersect3 = false;
+	public boolean intersect4 = false;
 
 	public void falling(GameContainer arg0, int delta) throws SlickException {
 
 	
 			fall = fall + 0.05000f * delta;
-			if (fall >= 550)
-				fall = 550;
 		
+	}
+	
+	public boolean intersection(Shape i){
+		intersect1 = rect1.intersects(i);
+		intersect2 = rect2.intersects(i);
+		intersect3 = rect3.intersects(i);
+		intersect4 = rect4.intersects(i);
+		
+		if(intersect1 == true || intersect2 == true || intersect3 == true || intersect4 == true) return(true);
+		
+		else return(false);
 	}
 	
 	public void drawing(GameContainer arg0, Graphics arg1) throws SlickException {
@@ -59,6 +71,8 @@ public class Tiles{
 			arg1.draw(rect2);
 			arg1.draw(rect3);
 			arg1.draw(rect4);
+			
+			
 			}
 		else if (rot == 2){
 			rect1 = new Rectangle(Setup.width/2-100+pos,fall,rectWidth,rectHeight);
