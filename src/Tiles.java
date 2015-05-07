@@ -11,7 +11,6 @@ public class Tiles{
 	public int rectWidth = 50;
 	public int rectHeight = 50;
 	public Shape rect = null;
-<<<<<<< HEAD
 	public Shape typeI = null;
 	public Shape typeL = null;
 	public Shape typeJ = null;
@@ -19,23 +18,11 @@ public class Tiles{
 	public Shape typeS = null;
 	public Shape typeZ = null;
 	public Shape typeO = null;
-	int fall = 2;
+	float fall = 2f;
 	
-	public void falling(GameContainer arg0, int arg1) throws SlickException {
-=======
-	float fall = 2;
-	
-	/*public static void main (String[] args) throws SlickException{
-		AppGameContainer app = new AppGameContainer(new tiles ("test"));
-		
-		app.setDisplayMode(800,600, false);
-		app.setAlwaysRender(true);
-		app.start();
-	}
-*/
-	
+
 	public void falling(GameContainer arg0, int delta) throws SlickException {
->>>>>>> f6366e952fb83df03e256aacf350349942665ea4
+
 	
 			fall = fall + 0.05000f * delta;
 			if (fall >= 550)
