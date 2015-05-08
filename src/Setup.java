@@ -17,7 +17,7 @@ public class Setup extends BasicGame {
 	public int pos = 0;
 	Tiles tiles = new Tiles();
 	Tiles next = new Tiles();
-	//Player player = new Player();
+	Tiles next2 = new Tiles();
 	public int left = 0;
 	public int right = 0;
 	public int key = Input.ANY_CONTROLLER;
@@ -26,7 +26,10 @@ public class Setup extends BasicGame {
 	private Shape rightSide = null;
 	private Shape leftSide = null;
 	private boolean flInter = false;
-	//public boolean [][][] posGrid = new boolean [][][];
+	public int [] curTileArr =  new int [100];
+	public int [] curRotArr = new int [100];
+	public int [] curPosArr = new int [100];
+	public int counter = 0;
 	private boolean rSInter = false;
 	private boolean lSInter = false;
 	private boolean rec101 = false;
@@ -60,8 +63,11 @@ public class Setup extends BasicGame {
 			curTile = t;
 			spawner();
 			floor = new Line(width,height, 0, height);
-			rightSide = new Line(width,0,width,height);
+			rightSide = new Line(width-50,0,width-50,height);
 			leftSide = new Line(0,0,0,height);
+			for (int i = 0; i >= curTileArr.length-1; i++ ){
+				curTileArr[i] = -6000;
+			}
 		}
 		
 		@Override
@@ -70,7 +76,11 @@ public class Setup extends BasicGame {
 				rec202 == true  || rec203 == true || rec204 == true || rec303 == true || rec304 == true ||
 				rec404 == true){
 				curTile2=curTile;
-				next.type (curTile2, rotation, pos);
+				curTileArr[counter] = curTile2;
+				curRotArr[counter] = rotation;
+				curPosArr[counter] = pos;
+				counter++;
+				next.type(curTile2, rotation, pos);
 				firstRun = true;
 				int t = r.nextInt(7);
 				curTile = t;
@@ -79,41 +89,51 @@ public class Setup extends BasicGame {
 				tiles.posY = 50f;
 				flInter = false;
 			}
+			for (int i = 0; i >= curTileArr.length-1; i++ ){
+				if (curTileArr[i] != -6000){
+					
+					Tiles r = new Tiles();
+					
+				}
+			}
 			spawner();
 			flInter = tiles.intersection(floor);
 			rSInter = tiles.intersection(rightSide);
 			lSInter = tiles.intersection(leftSide);
 			if (firstRun){
-			rec101 = tiles.intersection(next.rect1);
-			rec102 = tiles.intersection(next.rect2);
-			rec103 = tiles.intersection(next.rect3);
-			rec104 = tiles.intersection(next.rect4);
-			rec202 = tiles.intersection(next.rect2);
-			rec203 = tiles.intersection(next.rect3);
-			rec204 = tiles.intersection(next.rect4);
-			rec303 = tiles.intersection(next.rect3);
-			rec304 = tiles.intersection(next.rect4);
-			rec404 = tiles.intersection(next.rect4);
+				rec101 = tiles.intersection(next.rect1);
+				rec102 = tiles.intersection(next.rect2);
+				rec103 = tiles.intersection(next.rect3);
+				rec104 = tiles.intersection(next.rect4);
+				rec202 = tiles.intersection(next.rect2);
+				rec203 = tiles.intersection(next.rect3);
+				rec204 = tiles.intersection(next.rect4);
+				rec303 = tiles.intersection(next.rect3);
+				rec304 = tiles.intersection(next.rect4);
+				rec404 = tiles.intersection(next.rect4);
 			}
 			
 			if(flInter == false && rec101 == false && rec102 == false && rec103 == false && rec104 == false &&
 				rec202 == false && rec203 == false && rec204 == false && rec303 == false && rec304 == false &&
 				rec404 == false){
 				tiles.falling(container, delta);
-			}
+				}
 				
-		}
+			}
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
 			
 			if (firstRun){
-				next.drawing(container, g);
+			
+				//next.drawing(container, g);
+			
+				
 			}
 			tiles.drawing(container, g);
-			g.draw(floor);
-			g.draw(rightSide);
-			g.draw(leftSide);
+			//g.draw(floor);
+			//g.draw(rightSide);
+			//g.draw(leftSide);
 			
 			
 			

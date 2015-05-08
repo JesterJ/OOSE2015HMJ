@@ -16,7 +16,7 @@ public class Tiles {
 	public Shape rect3 = null;
 	public Shape rect4 = null;
 	
-	public float posY = 750f;
+	public float posY = 750;
 	public boolean intersect1 = false;
 	public boolean intersect2 = false;
 	public boolean intersect3 = false;
