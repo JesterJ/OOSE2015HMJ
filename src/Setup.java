@@ -11,14 +11,15 @@ import org.newdawn.slick.KeyListener;
 import java.util.Random;
 
 public class Setup extends BasicGame {
-	public static int width = 600;
-	public static int height = 800;
-	public static int rotation = 0;
-	public static int pos = 0;
+	public int width = 600;
+	public int height = 800;
+	public int rotation = 0;
+	public int pos = 0;
 	Tiles tiles = new Tiles();
+	Tiles next = new Tiles();
 	//Player player = new Player();
-	public static int left = 0;
-	public static int right = 0;
+	public int left = 0;
+	public int right = 0;
 	public int key = Input.ANY_CONTROLLER;
 	public char something;
 	private Shape floor = null;
@@ -29,6 +30,11 @@ public class Setup extends BasicGame {
 	private boolean rSInter = false;
 	private boolean lSInter = false;
 	Random r = new Random ();
+	public int curTile = 0;
+	public int curTile2;
+	public int curRot;
+	public int curPos;
+	public boolean nextTile = false;
 
 
 		public Setup(String title) {
@@ -38,20 +44,26 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void init(GameContainer container) throws SlickException {
-			
+			spawner();
 			floor = new Line(width,height, 0, height);
 			rightSide = new Line(width,0,width,height);
 			leftSide = new Line(0,0,0,height);
-			//spawner();
 		}
 		
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
-			/*if (flInter){
-				spawner();
+			if (flInter){
+				curTile2=curTile;
+				next.type(curTile2, rotation, pos);
+				nextTile = true;
+				int t = r.nextInt(7);
+				curTile = t;
+				tiles.fall = 2f;
+				pos = 0;
+				rotation = 0;
 				flInter = false;
-			}*/
-			
+			}
+			spawner();
 			flInter = tiles.intersection(floor);
 			rSInter = tiles.intersection(rightSide);
 			lSInter = tiles.intersection(leftSide);
@@ -62,11 +74,11 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			tiles.typeI(container, g, rotation, pos);
-			if (flInter){
-				spawner(container, g, rotation, pos);
-				//flInter = false;
-			}
+			//tiles.typeI(container, g, rotation, pos);
+			
+			if (nextTile)
+			next.drawing(container, g);
+			tiles.drawing(container, g);
 			g.draw(floor);
 			g.draw(rightSide);
 			g.draw(leftSide);
@@ -79,67 +91,38 @@ public class Setup extends BasicGame {
 		
 			AppGameContainer gamecontainer = new AppGameContainer(new Setup("Setup Test"));
 			
-			gamecontainer.setDisplayMode(width, height, false);
+			gamecontainer.setDisplayMode(600, 800, false);
 			
 			//gamecontainer.setMinimumLogicUpdateInterval(5);
 			
 			gamecontainer.start();
 			
 		}
-		public void grid (boolean[][] gridPos, int possition ){
+		/*public void grid (boolean[][] gridPos, int possition ){
 			int temp = rotation;
 			int temp2 = pos;
-		}
+		}*/
 		
 			public void keyPressed (int key, char c){
-				if (lSInter == false && rSInter == false && flInter == false && key == Input.KEY_F){
-					Setup.rotation++;
-					if(Setup.rotation == 4)
-						Setup.rotation = 0;
+				if (lSInter == false && rSInter == false && flInter == false && key == Input.KEY_I){
+					rotation++;
+					if(rotation == 4)
+						rotation = 0;
 				}
-				if (lSInter == false && flInter == false && key == Input.KEY_K){
+				if (lSInter == false && flInter == false && key == Input.KEY_J){
 					pos = pos - 50;
 				}
 				if (rSInter == false && flInter == false && key == Input.KEY_L){
 					pos = pos + 50;
 				}
-				/* if (rSInter == false && flInter == false && key == Input.KEY_M){
--					fall = fall + 50;
--				}*/ //could be implemented for faster falling (might need editing)
+				if (flInter == false && key == Input.KEY_K){
+					tiles.fall = tiles.fall + 50f;
+				} 
 			}
 			
 			
-	public void spawner(GameContainer container, Graphics g, int rot, int pos){
-	
-		int t = r.nextInt(7);
-  
-  		if(t == 0){
-  			Tiles.typeI(container, g, rotation, pos);
-		 }
-  
-  		if(t == 1){
-  			Tiles.typeL(container, g, rotation, pos);
-  		}
-  
-    	if(t == 2){
-    		Tiles.typeJ(container, g, rotation, pos);
-  		}
-  
-    	if(t == 3){
-    		Tiles.typeT(container, g, rotation, pos);
-  		}
-  
-    	if(t == 4){
-    		Tiles.typeO(container, g, rotation, pos);
-  		}
-  
-    	if(t == 5){
-    		Tiles.typeS(container, g, rotation, pos);
-  		}
-  
-    	if(t == 6){
-    		Tiles.typeZ(container, g, rotation, pos);
-  		}
+	public void spawner(){
+		tiles.type(curTile, rotation, pos);
 	}
 	
 	
