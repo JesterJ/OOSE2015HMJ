@@ -55,7 +55,7 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void init(GameContainer container) throws SlickException {
-			tiles.fall = 50;
+			tiles.posY = 50;
 			int t = r.nextInt(7);
 			curTile = t;
 			spawner();
@@ -76,7 +76,7 @@ public class Setup extends BasicGame {
 				curTile = t;
 				pos = 0;
 				rotation = 0;
-				tiles.fall = 50f;
+				tiles.posY = 50f;
 				flInter = false;
 			}
 			spawner();
@@ -98,8 +98,9 @@ public class Setup extends BasicGame {
 			
 			if(flInter == false && rec101 == false && rec102 == false && rec103 == false && rec104 == false &&
 				rec202 == false && rec203 == false && rec204 == false && rec303 == false && rec304 == false &&
-				rec404 == false)
+				rec404 == false){
 				tiles.falling(container, delta);
+			}
 				
 		}
 		
@@ -110,7 +111,7 @@ public class Setup extends BasicGame {
 				next.drawing(container, g);
 			}
 			tiles.drawing(container, g);
-			//g.draw(floor);
+			g.draw(floor);
 			g.draw(rightSide);
 			g.draw(leftSide);
 			
@@ -147,7 +148,7 @@ public class Setup extends BasicGame {
 					pos = pos + 50;
 				}
 				if (flInter == false && key == Input.KEY_K){
-					tiles.fall = tiles.fall + 50f;
+					tiles.posY = tiles.posY + 50f;
 				} 
 			}
 			
