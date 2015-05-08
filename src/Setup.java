@@ -66,7 +66,9 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void update(GameContainer container, int delta) throws SlickException {
-			if (flInter){
+			if (flInter == true || rec101 == true || rec102 == true || rec103 == true || rec104 == true ||
+				rec202 == true  || rec203 == true || rec204 == true || rec303 == true || rec304 == true ||
+				rec404 == true){
 				curTile2=curTile;
 				next.type (curTile2, rotation, pos);
 				firstRun = true;
@@ -94,8 +96,10 @@ public class Setup extends BasicGame {
 			rec404 = tiles.intersection(next.rect4);
 			}
 			
-			if(flInter == false || rec101 == false || rec102 == false || rec103 == false || rec104 == false ||
-				rec202 == false || rec203 == false || rec204 == false || rec304 == false)tiles.falling(container, delta);
+			if(flInter == false && rec101 == false && rec102 == false && rec103 == false && rec104 == false &&
+				rec202 == false && rec203 == false && rec204 == false && rec303 == false && rec304 == false &&
+				rec404 == false)
+				tiles.falling(container, delta);
 				
 		}
 		
@@ -106,7 +110,7 @@ public class Setup extends BasicGame {
 				next.drawing(container, g);
 			}
 			tiles.drawing(container, g);
-			g.draw(floor);
+			//g.draw(floor);
 			g.draw(rightSide);
 			g.draw(leftSide);
 			

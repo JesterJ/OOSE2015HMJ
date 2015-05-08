@@ -2,16 +2,15 @@
 //import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Input;
 //import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
-import org.newdawn.slick.BasicGame;
+
 
 public class Tiles{
-	public int rectWidth = 50;
-	public int rectHeight = 50;
+	public int rectWidth = 49;
+	public int rectHeight = 49;
 	public Shape rect1 = null;
 	public Shape rect2 = null;
 	public Shape rect3 = null;
@@ -22,19 +21,17 @@ public class Tiles{
 	public boolean intersect2 = false;
 	public boolean intersect3 = false;
 	public boolean intersect4 = false;
-	//Tiles next = new Tiles();
 
 	public void falling(GameContainer arg0, int delta) throws SlickException {
 			fall = fall + 0.05000f * delta;
 	}
-	
+
 	public boolean intersection(Shape i){
 		intersect1 = rect1.intersects(i);
 		intersect2 = rect2.intersects(i);
 		intersect3 = rect3.intersects(i);
 		intersect4 = rect4.intersects(i);
-		
-		
+			
 		if(intersect1 == true || intersect2 == true || intersect3 == true || intersect4 == true) return(true);
 		
 		else return(false);
