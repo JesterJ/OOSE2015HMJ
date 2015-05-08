@@ -57,10 +57,10 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 			}
 			else if (rot== 1){
-				rect1 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall+50,rectWidth,rectHeight);				
+				rect1 = new Rectangle(600/2+pos,fall-150,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);				
 				}
 			else if (rot == 2){
 				rect1 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
@@ -69,37 +69,37 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 				}
 			else if (rot== 3){
-				rect1 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2+pos,fall-150,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
 				}
 		}
 		//Type L
 		if (type == 1){
 			if (rot == 0){
-				rect1 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2+pos-100,fall,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos-50,fall,rectWidth,rectHeight);
 				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
-			}
+				rect4 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);				
+				}
 			if (rot == 1){
-				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
 				}
 			if (rot == 2){
-				rect1 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-100+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
 				}
 			if (rot == 3){
-				rect1 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-100+pos,fall-100,rectWidth,rectHeight);
 				}
 		}
 		//type J
@@ -111,22 +111,22 @@ public class Tiles{
 				rect4 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
 			}
 			if (rot == 1){
-				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
 				}
 			if (rot == 2){
-				rect1 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
 			}
 			if (rot == 3){
-				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-100+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
 				}
 		}
 		//Type T
@@ -138,22 +138,22 @@ public class Tiles{
 				rect4 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
 				}
 			if (rot == 1){
-				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
 				}
 			if (rot == 2){
-				rect1 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
 				}
 			if (rot == 3){
-				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2-100+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2-100+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
 				}
 		}
 		//Type O
@@ -192,10 +192,10 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall-50,rectWidth,rectHeight);
 			}
 			if (rot == 1){
-				rect1 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+50+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+50+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 			}
 			if (rot == 2){
 				rect1 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
@@ -204,10 +204,10 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall-50,rectWidth,rectHeight);
 			}
 			if (rot == 3){
-				rect1 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+50+pos,fall+50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+50+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 			}
 		}
 		//Type Z
@@ -219,10 +219,10 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 			}
 			if (rot == 1){
-				rect1 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
 			}
 			if (rot == 2){
 				rect1 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
@@ -231,10 +231,10 @@ public class Tiles{
 				rect4 = new Rectangle(600/2+50+pos,fall,rectWidth,rectHeight);
 			}
 			if (rot == 3){
-				rect1 = new Rectangle(600/2-50+pos,fall+50,rectWidth,rectHeight);
-				rect2 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
-				rect3 = new Rectangle(600/2+pos,fall,rectWidth,rectHeight);
-				rect4 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect1 = new Rectangle(600/2-50+pos,fall,rectWidth,rectHeight);
+				rect2 = new Rectangle(600/2-50+pos,fall-50,rectWidth,rectHeight);
+				rect3 = new Rectangle(600/2+pos,fall-50,rectWidth,rectHeight);
+				rect4 = new Rectangle(600/2+pos,fall-100,rectWidth,rectHeight);
 			}
 		}
 		

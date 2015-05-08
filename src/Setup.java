@@ -26,11 +26,21 @@ public class Setup extends BasicGame {
 	private Shape rightSide = null;
 	private Shape leftSide = null;
 	private boolean flInter = false;
-	public boolean [][] posGrid = new boolean [width/50][height/50];
+	//public boolean [][][] posGrid = new boolean [][][];
 	private boolean rSInter = false;
 	private boolean lSInter = false;
+	private boolean rec101 = false;
+	private boolean rec102 = false;
+	private boolean rec103 = false;
+	private boolean rec104 = false;
+	private boolean rec202 = false;
+	private boolean rec203 = false;
+	private boolean rec204 = false;
+	private boolean rec303 = false;
+	private boolean rec304 = false;
+	private boolean rec404 = false;
 	Random r = new Random ();
-	public int curTile = 1;
+	public int curTile;
 	public int curTile2;
 	public int curRot;
 	public int curPos;
@@ -71,8 +81,21 @@ public class Setup extends BasicGame {
 			flInter = tiles.intersection(floor);
 			rSInter = tiles.intersection(rightSide);
 			lSInter = tiles.intersection(leftSide);
+			if (firstRun){
+			rec101 = tiles.intersection(next.rect1);
+			rec102 = tiles.intersection(next.rect2);
+			rec103 = tiles.intersection(next.rect3);
+			rec104 = tiles.intersection(next.rect4);
+			rec202 = tiles.intersection(next.rect2);
+			rec203 = tiles.intersection(next.rect3);
+			rec204 = tiles.intersection(next.rect4);
+			rec303 = tiles.intersection(next.rect3);
+			rec304 = tiles.intersection(next.rect4);
+			rec404 = tiles.intersection(next.rect4);
+			}
 			
-			if(flInter == false)tiles.falling(container, delta);
+			if(flInter == false || rec101 == false || rec102 == false || rec103 == false || rec104 == false ||
+				rec202 == false || rec203 == false || rec204 == false || rec304 == false)tiles.falling(container, delta);
 				
 		}
 		
