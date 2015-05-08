@@ -17,7 +17,7 @@ public class Tiles{
 	public Shape rect3 = null;
 	public Shape rect4 = null;
 	
-	public float fall = 2f;
+	public float fall = 750f;
 	public boolean intersect1 = false;
 	public boolean intersect2 = false;
 	public boolean intersect3 = false;
@@ -34,6 +34,7 @@ public class Tiles{
 		intersect3 = rect3.intersects(i);
 		intersect4 = rect4.intersects(i);
 		
+		
 		if(intersect1 == true || intersect2 == true || intersect3 == true || intersect4 == true) return(true);
 		
 		else return(false);
@@ -45,11 +46,6 @@ public class Tiles{
 		arg1.draw(rect3);
 		arg1.draw(rect4);
 
-	}
-	
-	public void type (int number){
-		if (number == 0){
-		}
 	}
 	public void type (int type, int rot, int pos){
 		//Type I

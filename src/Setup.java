@@ -30,11 +30,12 @@ public class Setup extends BasicGame {
 	private boolean rSInter = false;
 	private boolean lSInter = false;
 	Random r = new Random ();
-	public int curTile = 0;
+	public int curTile = 1;
 	public int curTile2;
 	public int curRot;
 	public int curPos;
 	public boolean nextTile = false;
+	public boolean firstRun = false;
 
 
 		public Setup(String title) {
@@ -44,6 +45,9 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void init(GameContainer container) throws SlickException {
+			tiles.fall = 50;
+			int t = r.nextInt(7);
+			curTile = t;
 			spawner();
 			floor = new Line(width,height, 0, height);
 			rightSide = new Line(width,0,width,height);
@@ -54,13 +58,13 @@ public class Setup extends BasicGame {
 		public void update(GameContainer container, int delta) throws SlickException {
 			if (flInter){
 				curTile2=curTile;
-				next.type(curTile2, rotation, pos);
-				nextTile = true;
+				next.type (curTile2, rotation, pos);
+				firstRun = true;
 				int t = r.nextInt(7);
 				curTile = t;
-				tiles.fall = 2f;
 				pos = 0;
 				rotation = 0;
+				tiles.fall = 50f;
 				flInter = false;
 			}
 			spawner();
@@ -74,10 +78,10 @@ public class Setup extends BasicGame {
 		
 		@Override
 		public void render(GameContainer container, Graphics g) throws SlickException {	
-			//tiles.typeI(container, g, rotation, pos);
 			
-			if (nextTile)
-			next.drawing(container, g);
+			if (firstRun){
+				next.drawing(container, g);
+			}
 			tiles.drawing(container, g);
 			g.draw(floor);
 			g.draw(rightSide);
